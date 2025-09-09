@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf72fdcda2bbec4eab024d7a4aec6f6, type: 3}
-  m_Name: Dialogue
+  m_Name: Dialogue 2
   m_EditorClassIdentifier: 
-  charName: aaa
-  dialogueText: aaaaa
+  charName: Jong
+  dialogueText: Are we chill?
   choices:
-  - optionText: hey
+  - optionText: Yep
+    givesAffection: 1
+    affectionGiven: 1
+  - optionText: No
     givesAffection: 0
     affectionGiven: 0
-  - optionText: hi
-    givesAffection: 0
-    affectionGiven: 0
-  - optionText: yo
+  - optionText: I hate you
     givesAffection: 0
     affectionGiven: 0
