@@ -4,58 +4,55 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class RunDialogue : MonoBehaviour
+public class DialogueRunner : MonoBehaviour
 {
     public Dialogue[] dialogues;
-    public TextMeshProUGUI dialogueTxt;
-    public TextMeshProUGUI nameTxt;
-    public Button choiceBTN;
-    public RectTransform btnContainer;
-    public Dialogue currDialogue;
-    public int curAffection;
+    public TextMeshProUGUI dialogueText;
+    public TextMeshProUGUI nameText;
+    public Button choiceButton;
+    public RectTransform buttonContainer;
+    public Dialogue currentDialogue;
+    public int currentAffection;
     public int dialogueIndex = 0;
-    public GameObject rankup;
+    public GameObject rankupUI;
     public TextMeshProUGUI rankText;
-    public int rank;
+    public int currentRank;
     // Start is called before the first frame update
     void Start()
     {
-        currDialogue = dialogues[0];
-        nameTxt.text = currDialogue.charName;
-        dialogueTxt.text = currDialogue.dialogueText;
-        Choices(currDialogue);
+        LoadDialogue();
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (curAffection >= 5)
+        if (currentAffection >= 5)
         {
-            rank++;
-            StartCoroutine(Rankup());
-            curAffection = 0;
+            currentRank++;
+            StartCoroutine(RankUp());
+            currentAffection = 0;
         }
 
-        if (rank == 10)
+        if (currentRank == 10)
         {
-            rank = 0;
+            currentRank = 0;
         }
     }
 
-    IEnumerator Rankup()
+    IEnumerator RankUp()
     {
-        rankup.SetActive(true);
-        rankText.text = rank.ToString();
+        rankupUI.SetActive(true);
+        rankText.text = currentRank.ToString();
         yield return new WaitForSeconds(2f);
-        rankup.SetActive(false);
+        rankupUI.SetActive(false);
 
         yield return null;
     }
 
-    public void Choices(Dialogue dialogue)
+    public void ShowChoices(Dialogue dialogue)
     {
-        foreach (Transform choices in btnContainer) {
+        foreach (Transform choices in buttonContainer) {
         Destroy(choices.gameObject);
         
         }
@@ -63,33 +60,33 @@ public class RunDialogue : MonoBehaviour
         for (int i = 0; i < dialogue.choices.Count; i++) {
             int choiceIndex = i;
             Choices choice = dialogue.choices[i];
-            Button b = Instantiate(choiceBTN, btnContainer);
+            Button b = Instantiate(choiceButton, buttonContainer);
             TMP_Text txt = b.GetComponentInChildren<TMP_Text>();
             txt.text = choice.optionText;
-            b.onClick.AddListener(() => BtnChoice(choiceIndex));
+            b.onClick.AddListener(() => HandleChoice(choiceIndex));
         }
     }
-    public void BtnChoice(int index)
+    public void HandleChoice(int index)
     {
-        Choices chosen = currDialogue.choices[index];
+        Choices chosen = currentDialogue.choices[index];
         if (chosen.givesAffection)
         {
-            curAffection += chosen.affectionGiven;
+            currentAffection += chosen.affectionGiven;
         }
         dialogueIndex += 1;
-        newDialogue();
+        LoadDialogue();
     }
 
-    public void newDialogue()
+    public void LoadDialogue()
     {
         if (dialogueIndex >= dialogues.Length)
         {
             dialogueIndex = 0;
         }
 
-        currDialogue = dialogues[dialogueIndex];
-        nameTxt.text = currDialogue.charName;
-        dialogueTxt.text = currDialogue.dialogueText;
-        Choices(currDialogue);
+        currentDialogue = dialogues[dialogueIndex];
+        nameText.text = currentDialogue.charName;
+        nameText.text = currentDialogue.dialogueText;
+        ShowChoices(currentDialogue);
     }
 }
