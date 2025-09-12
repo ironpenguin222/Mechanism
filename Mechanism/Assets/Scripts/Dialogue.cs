@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Dialogue", menuName = "DialogueEvent")]
 public class Dialogue : ScriptableObject
 {
-    public string charName;
     [TextArea] public string dialogueText;
     public List<Choices> choices;
 }

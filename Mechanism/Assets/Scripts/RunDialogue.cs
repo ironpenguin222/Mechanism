@@ -6,20 +6,21 @@ using UnityEngine.UI;
 
 public class DialogueRunner : MonoBehaviour
 {
+    public List <Character> characters;
+    public Character currentCharacter;
     public Dialogue[] dialogues;
     public TextMeshProUGUI dialogueText;
     public TextMeshProUGUI nameText;
     public Button choiceButton;
     public RectTransform buttonContainer;
     public Dialogue currentDialogue;
-    public int currentAffection;
     public int dialogueIndex = 0;
     public GameObject rankupUI;
     public TextMeshProUGUI rankText;
-    public int currentRank;
     // Start is called before the first frame update
     void Start()
     {
+        currentCharacter = characters[0];
         LoadDialogue();
 
     }
@@ -27,23 +28,23 @@ public class DialogueRunner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentAffection >= 5)
+        if (currentCharacter.currentAffection >= 5)
         {
-            currentRank++;
+            currentCharacter.currentRank++;
             StartCoroutine(RankUp());
-            currentAffection = 0;
+            currentCharacter.currentAffection = 0;
         }
 
-        if (currentRank == 10)
+        if (currentCharacter.currentRank == 10)
         {
-            currentRank = 0;
+            currentCharacter.currentRank = 0;
         }
     }
 
     IEnumerator RankUp()
     {
         rankupUI.SetActive(true);
-        rankText.text = currentRank.ToString();
+        rankText.text = currentCharacter.currentRank.ToString();
         yield return new WaitForSeconds(2f);
         rankupUI.SetActive(false);
 
@@ -71,7 +72,7 @@ public class DialogueRunner : MonoBehaviour
         Choices chosen = currentDialogue.choices[index];
         if (chosen.givesAffection)
         {
-            currentAffection += chosen.affectionGiven;
+            currentCharacter.currentAffection += chosen.affectionGiven;
         }
         dialogueIndex += 1;
         LoadDialogue();
@@ -85,7 +86,7 @@ public class DialogueRunner : MonoBehaviour
         }
 
         currentDialogue = dialogues[dialogueIndex];
-        nameText.text = currentDialogue.charName;
+        nameText.text = currentCharacter.charName;
         nameText.text = currentDialogue.dialogueText;
         ShowChoices(currentDialogue);
     }
