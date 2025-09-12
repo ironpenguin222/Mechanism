@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ccf72fdcda2bbec4eab024d7a4aec6f6, type: 3}
-  m_Name: Dialogue 1
+  m_Name: Jeon1-1
   m_EditorClassIdentifier: 
   charName: Jong
-  dialogueText: You are so cool
+  dialogueText: Hey what's up?
   choices:
-  - optionText: I know I am
+  - optionText: Nothing much
     givesAffection: 0
     affectionGiven: 0
-  - optionText: Thank you
+  - optionText: The sky
+    givesAffection: 0
+    affectionGiven: 0
+  - optionText: Waffles
     givesAffection: 1
     affectionGiven: 1
-  - optionText: No
-    givesAffection: 0
-    affectionGiven: 0
