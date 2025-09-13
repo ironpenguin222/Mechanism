@@ -2294,14 +2294,13 @@ MonoBehaviour:
   buttonContainer: {fileID: 1359843245}
   currentDialogue: {fileID: 0}
   dialogueIndex: 0
-  dialogues: []
   dialogueUI: {fileID: 53990167}
   dialogueText: {fileID: 426716234}
   nameText: {fileID: 1734006300}
   npcPortrait: {fileID: 813905001}
   rankupUI: {fileID: 1242954756}
   rankText: {fileID: 1522741784}
-  rankNameText: {fileID: 0}
+  rankNameText: {fileID: 1112142276}
 --- !u!4 &1583925477
 Transform:
   m_ObjectHideFlags: 0
