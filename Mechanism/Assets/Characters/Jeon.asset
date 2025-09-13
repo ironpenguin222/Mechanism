@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c145e2250f24a3543b7573ccc8df396d, type: 3}
   m_Name: Jeon
   m_EditorClassIdentifier: 
-  charName: Jeon
+  characterName: Jeon
   currentRank: 0
   currentAffection: 0
   characterImage: {fileID: 21300000, guid: c97387eb622c879409a59a9dbe98cf03, type: 3}
@@ -21,7 +21,11 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cb2dc75b1aa442746863e6bc95c4837a, type: 2}
     - {fileID: 11400000, guid: 7a4f02062fae14c4082751d9506727d8, type: 2}
     - {fileID: 11400000, guid: 19f290c6a0703014d80522d43456e212, type: 2}
-  - dialogues: []
-  - dialogues: []
-  - dialogues: []
-  - dialogues: []
+  - dialogues:
+    - {fileID: 11400000, guid: 7a6bddbdf489438479c5aa35a51a85b4, type: 2}
+    - {fileID: 11400000, guid: 4843af76eb061694a864edec26d024eb, type: 2}
+    - {fileID: 11400000, guid: 425bfb4ec6b5fef4ba462a39c42147f6, type: 2}
+  - dialogues:
+    - {fileID: 11400000, guid: ec3bc8f9e7804db47bebb7b46447d878, type: 2}
+    - {fileID: 11400000, guid: 8495c946bb17bb14eb0915c5e40263d7, type: 2}
+    - {fileID: 11400000, guid: d6f02675217b71748af508a8ed76048d, type: 2}

@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf72fdcda2bbec4eab024d7a4aec6f6, type: 3}
   m_Name: Jeon1-3
   m_EditorClassIdentifier: 
-  charName: Jong
   dialogueText: Are we chill?
   choices:
   - optionText: Yep
     givesAffection: 1
     affectionGiven: 1
-  - optionText: No
-    givesAffection: 0
-    affectionGiven: 0
+  - optionText: Very much so
+    givesAffection: 1
+    affectionGiven: 2
   - optionText: I hate you
     givesAffection: 0
     affectionGiven: 0

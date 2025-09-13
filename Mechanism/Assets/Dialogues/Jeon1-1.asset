@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf72fdcda2bbec4eab024d7a4aec6f6, type: 3}
   m_Name: Jeon1-1
   m_EditorClassIdentifier: 
-  charName: Jong
   dialogueText: Hey what's up?
   choices:
   - optionText: Nothing much
     givesAffection: 0
     affectionGiven: 0
-  - optionText: The sky
-    givesAffection: 0
-    affectionGiven: 0
-  - optionText: Waffles
+  - optionText: What's up with you?
+    givesAffection: 1
+    affectionGiven: 2
+  - optionText: The fear of death
     givesAffection: 1
     affectionGiven: 1

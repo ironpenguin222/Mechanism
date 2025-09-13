@@ -2,17 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Triggers dialogue when player interacts with NPC
 public class NPCTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Character character;
+    public bool playerInRange = false;
+    public DialogueRunner dialogue;
+
+    // Checks if player is in range and presses E
+    private void Update()
     {
-        
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
+        {
+            dialogue.StartDialogue(character);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    // Changes variable wheteher player is in range or not
+    private void OnTriggerEnter(Collider other)
     {
-        
+        playerInRange = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        playerInRange = false;
     }
 }

@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf72fdcda2bbec4eab024d7a4aec6f6, type: 3}
   m_Name: Jeon2-1
   m_EditorClassIdentifier: 
-  charName: Jong
-  dialogueText: Hey what's up?
+  dialogueText: I like almonds
   choices:
-  - optionText: Nothing much
+  - optionText: I HATE almonds
     givesAffection: 0
     affectionGiven: 0
-  - optionText: The sky
+  - optionText: Me too
     givesAffection: 0
-    affectionGiven: 0
-  - optionText: Waffles
-    givesAffection: 1
     affectionGiven: 1
+  - optionText: Almonds taste like papercuts
+    givesAffection: 0
+    affectionGiven: 0

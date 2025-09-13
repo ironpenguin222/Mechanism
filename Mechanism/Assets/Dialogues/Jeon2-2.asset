@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf72fdcda2bbec4eab024d7a4aec6f6, type: 3}
   m_Name: Jeon2-2
   m_EditorClassIdentifier: 
-  charName: Jong
-  dialogueText: You are so cool
+  dialogueText: You look like a circle
   choices:
-  - optionText: I know I am
+  - optionText: Rude
     givesAffection: 0
     affectionGiven: 0
   - optionText: Thank you
     givesAffection: 1
-    affectionGiven: 1
-  - optionText: No
+    affectionGiven: 2
+  - optionText: Why would you say that?
     givesAffection: 0
     affectionGiven: 0

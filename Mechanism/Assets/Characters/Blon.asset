@@ -12,8 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c145e2250f24a3543b7573ccc8df396d, type: 3}
   m_Name: Blon
   m_EditorClassIdentifier: 
-  charName: Blon
+  characterName: Blon
   currentRank: 0
   currentAffection: 0
   characterImage: {fileID: 21300000, guid: f5fbfd146afe53c4ea0744313dff5042, type: 3}
-  rankedDialogues: []
+  rankedDialogues:
+  - dialogues:
+    - {fileID: 11400000, guid: 5cee89baf5fdc4c4f988c26522966437, type: 2}
+    - {fileID: 11400000, guid: 6f1ce4f8b545e6848a421c013b6bedfc, type: 2}
+    - {fileID: 11400000, guid: d1c612cbc86d1414e953422839b50e8f, type: 2}
+  - dialogues:
+    - {fileID: 11400000, guid: 423ce3502036a6848bbd2b7f350d1dca, type: 2}
+    - {fileID: 11400000, guid: 6bab5a68265f443419393910c4b7df36, type: 2}
+    - {fileID: 11400000, guid: a346eeb58b2ec8349ad6a0afc6d0fd92, type: 2}
+  - dialogues:
+    - {fileID: 11400000, guid: 065bb33f66f571b4db2fe97d45bfb41c, type: 2}
+    - {fileID: 11400000, guid: 0742c3589fadad84e86e8e531edb40a3, type: 2}
+    - {fileID: 11400000, guid: 0d463401c09482c489821ade3540e09c, type: 2}
